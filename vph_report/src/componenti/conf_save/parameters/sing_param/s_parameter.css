@@ -12,23 +12,52 @@
 
 .div_check{
     display: flex;
-    border: 2px solid black;
+    border: 2px solid lightslategray;
     border-radius: 5px;
     height: 100%;
     margin-left: 10px;
     min-width: 65px;
     justify-content: center;
+    align-items: center;
+    caret-color: red;
+}
+.div_input_sp_params{
+    display: flex;
+    border: 2px solid lightslategray;
+    border-radius: 5px;
+    height: 100%;
+    min-width: 65px;
+    justify-content: center;
+    align-items: center;
+    caret-color: red;
+
 }
 
-.div_check input[type='checkbox']{
+.div_input_sp_params:focus-within {
+    border: 3px solid black;
+}
 
+
+.div_input_sp_params input{
+    font-size: 25px;
+    text-align: center  ;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+
+
+.div_check button{
+    height: 100%;
+    width: 100%;
 }
 
 
 .div_label{
     display: flex;
     margin-left: 10px;
-    border: 2px solid black;
+    border: 2px solid lightslategray;
     border-radius: 5px;
     font-size: 20px;
     min-width: 250px;
