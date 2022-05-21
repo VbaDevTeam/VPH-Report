@@ -1,0 +1,13 @@
+.div_container_pageReport{
+
+}
+.div_title_pageReport{
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.div_body_pageReport{
+    /*border: 1px solid blueviolet;*/
+    display: flex;
+    padding: 15px;
+}

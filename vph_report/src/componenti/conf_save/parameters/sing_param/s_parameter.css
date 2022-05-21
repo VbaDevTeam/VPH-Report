@@ -1,0 +1,39 @@
+.div_container{
+    /*border: 1px solid red;*/
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    height: 75px;
+}
+.div_container h2{
+    border: 3px solid violet;
+
+}
+
+.div_check{
+    display: flex;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 100%;
+    margin-left: 10px;
+    min-width: 65px;
+    justify-content: center;
+}
+
+.div_check input[type='checkbox']{
+
+}
+
+
+.div_label{
+    display: flex;
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    min-width: 250px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding-left: 15px;
+}

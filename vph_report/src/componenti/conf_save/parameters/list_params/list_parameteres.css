@@ -1,0 +1,18 @@
+.div_container_list{
+    /*border: 1px solid green;*/
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+}
+
+.div_title{
+    padding-left: 15px;
+    /*border: 1px solid blueviolet;*/
+}
+
+.div_list{
+    /*border: 1px solid darkred;*/
+}
+.div_list ul{
+    padding: 0;
+}

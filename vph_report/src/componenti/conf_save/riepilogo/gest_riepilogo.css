@@ -1,0 +1,35 @@
+.div_container_recap{
+    flex:1;
+    /*border: 1px solid green;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.div_infos_recap{
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.div_image_recap{
+    /*border: 2px solid red;*/
+    justify-content: end;
+    text-align: end;
+    padding: 25px;
+
+}
+
+.div_image_recap img{
+    height: 350px;
+    width: 350px;
+}
+
+
+.div_recap_recap {
+    display: flex;
+    flex-direction: column;
+}
+
+.div_recap_text_recap{
+    padding: 15px;
+    font-size: 2.5rem;
+}
