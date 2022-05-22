@@ -16,6 +16,7 @@ const ListParameters = ({Data, returnData}) => {
         returnData(tmpRow);
     }
 
+
     return (
         <div className={'div_container_list'}>
             <div className={'div_title'}>
@@ -24,7 +25,7 @@ const ListParameters = ({Data, returnData}) => {
             <div className={'div_list'}>
                 <ul>
                     {Data.data.map(x => (
-                        <SingleParameter lElement={x} returnRow={handlerParam} />
+                        <SingleParameter lElement={x} returnElement={handlerParam} />
                     ))}
                 </ul>
             </div>
