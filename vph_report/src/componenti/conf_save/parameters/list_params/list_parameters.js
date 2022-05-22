@@ -8,13 +8,14 @@ const ListParameters = ({Data, returnData}) => {
 
 
     const handlerParam = (data) => {
+        console.table('lData', lData);
         console.table("listParameters", data);
-        const tmpData = Object.assign({}, lData);
-        let element = lData.data.find(el => el.id === data.id);
-        let idxEl = lData.data.indexOf(element);
-        tmpData.data[idxEl] = data;
-        setLData(tmpData);
-        returnData(tmpData);
+        const tmpRow = Object.assign({}, lData);
+        var element = lData.data.find(el => el.id === data.id);
+        var idxEl = lData.data.indexOf(element);
+        tmpRow.data[idxEl] = data;
+        setLData(tmpRow);
+        returnData(tmpRow);
     }
 
     return (
