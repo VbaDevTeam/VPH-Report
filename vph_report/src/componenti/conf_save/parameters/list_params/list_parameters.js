@@ -8,6 +8,7 @@ const ListParameters = ({Data, returnData}) => {
 
 
     const handlerParam = (data) => {
+        console.table('lData', lData);
         console.table("listParameters", data);
         const tmpRow = Object.assign({}, lData);
         var element = lData.data.find(el => el.id === data.id);
