@@ -1,14 +1,11 @@
-import React, {useEffect, useState, useContext} from 'react';
+import React, {useEffect, useState} from 'react';
 import ImgReport from '../../../Images/Recap/monitor.png';
 import './gest_riepilogo.css';
 import './terminal.css';
-import {DataContext} from "../../../Context";
+import {useConrepo} from "../../../Hooks";
+
 const GestRiepilogo = () => {
-
-    const { val1, val2 } = useContext(DataContext);
-    const [dataChannel] = val1;
-    const [dataAcquisition] = val2;
-
+    const {dataChannel, dataAcquisition} = useConrepo();
     const [lMsg, setLMsg] = useState("Testo");
     const [lMsgChannels, setLMsgChannels] = useState("Testo");
     const [errorAcq, setErrorAcq] = useState("div_recap_text_recap");
