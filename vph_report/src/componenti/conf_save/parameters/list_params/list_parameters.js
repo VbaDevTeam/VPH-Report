@@ -8,9 +8,10 @@ const ListParameters = ({Data, returnData}) => {
 
 
     const handlerParam = (data) => {
+        console.table("listParameters", data);
         const tmpData = Object.assign({}, lData);
-        var element = lData.data.find(el => el.id === data.id);
-        var idxEl = lData.data.indexOf(element);
+        let element = lData.data.find(el => el.id === data.id);
+        let idxEl = lData.data.indexOf(element);
         tmpData.data[idxEl] = data;
         setLData(tmpData);
         returnData(tmpData);
@@ -24,7 +25,7 @@ const ListParameters = ({Data, returnData}) => {
             <div className={'div_list'}>
                 <ul>
                     {Data.data.map(x => (
-                        <SingleParameter lRow={x} returnRow={handlerParam} />
+                        <SingleParameter lElement={x} returnElement={handlerParam} />
                     ))}
                 </ul>
             </div>

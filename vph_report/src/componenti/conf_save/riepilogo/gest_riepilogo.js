@@ -2,10 +2,12 @@ import React, {useEffect, useState} from 'react';
 import ImgReport from '../../../Images/Recap/monitor.png';
 import './gest_riepilogo.css';
 import './terminal.css';
-import {useConrepo} from "../../../Hooks";
+import {useSelector} from "react-redux";
+import {selectDataAcq, selectDataChs} from "../../../Redux/conrepoSlice";
 
 const GestRiepilogo = () => {
-    const {dataChannel, dataAcquisition} = useConrepo();
+    const dataChannel = useSelector(selectDataChs);
+    const dataAcquisition = useSelector(selectDataAcq);
     const [lMsg, setLMsg] = useState("Testo");
     const [lMsgChannels, setLMsgChannels] = useState("Testo");
     const [errorAcq, setErrorAcq] = useState("div_recap_text_recap");
