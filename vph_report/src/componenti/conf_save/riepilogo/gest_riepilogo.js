@@ -1,8 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import ImgReport from '../../../Images/Recap/monitor.png';
 import './gest_riepilogo.css';
 import './terminal.css';
-const GestRiepilogo = ({lDataAcquisition, lDataChannels}) => {
+import {DataContext} from "../../../Context";
+const GestRiepilogo = () => {
+
+    const { val1, val2 } = useContext(DataContext);
+    const [dataChannel] = val1;
+    const [dataAcquisition] = val2;
 
     const [lMsg, setLMsg] = useState("Testo");
     const [lMsgChannels, setLMsgChannels] = useState("Testo");
@@ -11,12 +16,12 @@ const GestRiepilogo = ({lDataAcquisition, lDataChannels}) => {
     useEffect(()=>{
         selectInfos();
         selectDatas();
-    }, [lDataAcquisition, lDataChannels])
+    }, [dataChannel, dataAcquisition])
 
     const selectInfos = () => {
         setErrorAcq("div_recap_text_recap");
-        var AI = parseInt(lDataAcquisition.data[0].Value);
-        var AD = parseInt(lDataAcquisition.data[1].Value);
+        var AI = parseInt(dataAcquisition.data[0].Value);
+        var AD = parseInt(dataAcquisition.data[1].Value);
         var msg ="Con questa configurazione i dati verranno salvati contiamente alla velocità massima di acquisizione fino al termine della prova";
         // Acquisizione continua
         if(AI === 0 && AD === 0)
@@ -40,9 +45,10 @@ const GestRiepilogo = ({lDataAcquisition, lDataChannels}) => {
 
     const selectDatas = () =>{
         var msg = "022-05-10 19:40:15.969 ";
-        lDataChannels.data.map(el=>{
+        dataChannel.data.map(el=>{
             if(el.Value === true)
                 msg += el.Name + ":" + Math.floor(Math.random() * (1000 - 100) + 100) / 100 +", ";
+            return msg;
         });
         setLMsgChannels(msg);
     }

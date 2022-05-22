@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
-import Single_parameter from "../sing_param/single_parameter";
 import './list_parameteres.css'
+import SingleParameter from "../sing_param/single_parameter";
+
+
 const ListParameters = ({Data, returnData}) => {
     const [lData, setLData] = useState(Data);
 
@@ -22,7 +24,7 @@ const ListParameters = ({Data, returnData}) => {
             <div className={'div_list'}>
                 <ul>
                     {Data.data.map(x => (
-                        <Single_parameter lRow={x} returnRow={handlerParam} />
+                        <SingleParameter lRow={x} returnRow={handlerParam} />
                     ))}
                 </ul>
             </div>
