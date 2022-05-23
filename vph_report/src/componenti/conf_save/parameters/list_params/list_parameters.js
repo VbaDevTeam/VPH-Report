@@ -8,12 +8,18 @@ const ListParameters = ({Data, returnData}) => {
 
 
     const handlerParam = (data) => {
-        console.table('lData', lData);
-        console.table("listParameters", data);
-        const tmpRow = Object.assign({}, lData);
-        var element = lData.data.find(el => el.id === data.id);
-        var idxEl = lData.data.indexOf(element);
-        tmpRow.data[idxEl] = data;
+        // console.table('lData', lData);
+        // console.table("dataArrived", data);
+        let tmpRow = Object.assign({}, lData);
+        // let element = lData.data.find(el => el.id === data.id);
+        let othersEl = lData.data.filter(el => el.id !== data.id);
+        // console.table('element', element);
+        // let idxEl = lData.data.indexOf(element);
+        // console.table('tmpRow', tmpRow);
+        othersEl.push(data);
+        // tmpRow.data[idxEl] = data;
+        // console.table('othersEl', othersEl);
+        tmpRow.data = othersEl;
         setLData(tmpRow);
         returnData(tmpRow);
     }
@@ -26,7 +32,9 @@ const ListParameters = ({Data, returnData}) => {
             <div className={'div_list'}>
                 <ul>
                     {Data.data.map(x => (
-                        <SingleParameter lElement={x} returnElement={handlerParam} />
+                        <li key={x.id}>
+                            <SingleParameter id={x.id} lElement={x} returnElement={handlerParam} />
+                        </li>
                     ))}
                 </ul>
             </div>

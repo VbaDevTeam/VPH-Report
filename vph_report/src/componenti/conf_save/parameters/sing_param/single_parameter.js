@@ -14,6 +14,7 @@ const SingleParameter = ({lElement, returnElement}) => {
     }
 
     return (
+
         <div className={"div_container"}>
             {
                 lElement.IsBoolean === "True"

@@ -2,7 +2,7 @@ import React from "react";
 import './App.css';
 import PaginaReport from "./Pages/gestReport";
 import {useDispatch} from "react-redux";
-import {setInitDataAcquisition, setInitDataChannels} from "./Redux/conrepoSlice";
+import {setDataAcquisition, setDataChannels} from "./Redux/conrepoSlice";
 let fakeDataChannel = {
     title: ' -> Selezionare quali dati avere all\'interno del Report',
     data : [
@@ -26,8 +26,8 @@ let fakeDataAcq = {
 
 function App() {
     const dispatch = useDispatch();
-    dispatch(setInitDataAcquisition(fakeDataAcq));
-    dispatch(setInitDataChannels(fakeDataChannel));
+    dispatch(setDataAcquisition(fakeDataAcq));
+    dispatch(setDataChannels(fakeDataChannel));
 
 
   return (
