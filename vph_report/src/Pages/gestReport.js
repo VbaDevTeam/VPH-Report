@@ -1,5 +1,5 @@
 import React from 'react';
-import TotalParameters from "../componenti/conf_save/configurazione_report/total_parameters";
+import TotalParameters from "../componenti/conf_save/total_parameters/total_parameters";
 import GestRiepilogo from "../componenti/conf_save/riepilogo/gest_riepilogo";
 import './gestReport.css';
 
