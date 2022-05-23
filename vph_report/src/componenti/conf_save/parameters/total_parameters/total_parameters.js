@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
-import ListParameters from "../parameters/list_params/list_parameters";
+import ListParameters from "../list_params/list_parameters";
 import './total_parameters.css';
-import {DataContext} from "../../../Context";
+import {DataContext} from "../../../../Context";
 
 const TotalParameters = () => {
     const { val1, val2 } = useContext(DataContext);

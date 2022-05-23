@@ -27,7 +27,9 @@ const ListParameters = ({Data, returnData}) => {
             <div className={'div_list'}>
                 <ul>
                     {Data.data.map(x => (
-                        <SingleParameter lElement={x} returnElement={handlerParam} />
+                        <li key={x.id}>
+                            <SingleParameter lElement={x} returnElement={handlerParam} />
+                        </li>
                     ))}
                 </ul>
             </div>
