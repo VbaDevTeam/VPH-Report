@@ -33,7 +33,7 @@ const ListParameters = ({Data, returnData}) => {
                 <ul>
                     {Data.data.map(x => (
                         <li key={x.id}>
-                            <SingleParameter id={x.id} lElement={x} returnElement={handlerParam} />
+                            <SingleParameter lElement={x} returnElement={handlerParam} />
                         </li>
                     ))}
                 </ul>
