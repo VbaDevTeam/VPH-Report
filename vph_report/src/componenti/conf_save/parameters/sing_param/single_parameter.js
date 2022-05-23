@@ -3,13 +3,7 @@ import './s_parameter.css';
 
 
 const SingleParameter = ({StateParam, DescrParam}) => {
-    const [lState, setLState] = useState(StateParam);
-
-
-    // useEffect(()=>{
-    //     setLState(StateParam)
-    // },[])
-
+    const [lState] = useState(StateParam);
 
     return (
         <div className={"div_container"}>

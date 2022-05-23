@@ -1,5 +1,5 @@
 import React from 'react';
-import ListParameters from "../parameters/list_params/list_parameters";
+import ListParameters from "../list_params/list_parameters";
 import './total_parameters.css';
 
 const TotalParameters = () => {

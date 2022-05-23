@@ -10,7 +10,9 @@ const ListParameters = ({Title, Data}) => {
             <div className={'div_list'}>
                 <ul>
                     {Data.map(x => (
-                        <Single_parameter StateParam={false} DescrParam={x.Description}  />
+                        <li key={x.id}>
+                            <Single_parameter StateParam={false} DescrParam={x.Description}  />
+                        </li>
                     ))}
                 </ul>
             </div>
